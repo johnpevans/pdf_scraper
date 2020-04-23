@@ -1,11 +1,11 @@
-### Scraping Sites for PDF Documents
+# Scraping Sites for PDF Documents
 
-# Summary
+## Summary
 
 This is a one-and-done program and was created to scrape certain sites for
 PDFs. The program can be easily manipulated to meet the user's need.
 
-# Requirements
+## Requirements
 
 The following packages/files will need to be installed.
 
@@ -17,16 +17,18 @@ If you are using Chrome then Chromedriver.exe will need to be either installed
 in the same folder as the program, or the following will need to be added to
 the code:
 
-*webdriver.ChromeOptions(executable_path=r"C:\FILE_PATH")*    
+'''
+webdriver.ChromeOptions(executable_path=r"C:\FILE_PATH")
+'''    
 
-# Robots.txt
+## Robots.txt
 The documents I wanted to download are publicly available and in line with
 their [robots.txt](https://state.nj.us/robots.txt) file. The robots.txt file
 only offered restrictions on sensitive sites like Homeland Security, Department
 of Banking and Insurance, Department of State, etc., but did not exclude the
 Department of Human Services.
 
-# Methodology
+#### Methodology
 
 I had to first look at the site and inspect the elements. It was mostly uniform
 in the URL, except for those documents in 2014, so it became evident that it
@@ -39,8 +41,10 @@ URLs, and then use Selenium to download files using the links.
 I had to use try and except because I found that when the program was done it
 would throw an error:
 
-*Initial run received error: selenium.common.exceptions.WebDriverException:
-Message: chrome not reachable*
+'''
+Initial run received error: selenium.common.exceptions.WebDriverException:
+Message: chrome not reachable
+'''
 
 I placed the message "Download complete!" to print when the error is reached.
 
@@ -49,7 +53,7 @@ specific and as the file names were not uniform I missed a lot of the files I
 wanted. I used the more general *.pdf* as it would be easier to parse out the
 files I don't want after they were downloaded.
 
-# Further Instructions and Limitations
+## Further Instructions and Limitations
 
 Line 25 could be changed to ensure that the full URL is added to the list
 *scraped_urls*. This will involve inspecting the elements of the web page to
@@ -69,7 +73,7 @@ to handle duplicate names or create parameters to rename the files to make them
 more standardized.
 
 
-# References:
+## References:
 
 https://stackoverflow.com/questions/19056031/download-files-using-requests-and-beautifulsoup
 
@@ -79,7 +83,7 @@ https://stackoverflow.com/questions/27790415/set-lxml-as-default-beautifulsoup-p
 
 https://stackoverflow.com/questions/40654358/how-to-control-the-download-of-files-with-selenium-python-bindings-in-chrome
 
-# License
+## License
 
 MIT License
 
