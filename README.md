@@ -17,9 +17,9 @@ If you are using Chrome then Chromedriver.exe will need to be either installed
 in the same folder as the program, or the following will need to be added to
 the code:
 
-'''
+```
 webdriver.ChromeOptions(executable_path=r"C:\FILE_PATH")
-'''    
+```
 
 ## Robots.txt
 The documents I wanted to download are publicly available and in line with
@@ -41,10 +41,10 @@ URLs, and then use Selenium to download files using the links.
 I had to use try and except because I found that when the program was done it
 would throw an error:
 
-'''
+```
 Initial run received error: selenium.common.exceptions.WebDriverException:
 Message: chrome not reachable
-'''
+```
 
 I placed the message "Download complete!" to print when the error is reached.
 
